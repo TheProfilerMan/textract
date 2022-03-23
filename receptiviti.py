@@ -8,8 +8,8 @@ def InvokeTextDetectJob(s3BucketName, objectName):
     response = client.start_document_text_detection(
             DocumentLocation={
                       'S3Object': {
-                                    'Bucket': receptiviti/pdf/,
-                                    'Name': sample.pdf
+                                    'Bucket': s3BucketName,
+                                    'Name': documentName
                                 }
            })
     ## jobid from AWS
